@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>
+            DIAMOND
+        </title>
+        <link rel="stylesheet" type="text/css" href="diamonds.css">
+    </head>
+    <body>
+        <h1 style="text-align: center; color: wheat;">HOVER THE IMAGES</h1>
+        <div class="demo">
+            <div class="item"><img src="use1.jpg"></div>
+            <div class="item"><img src="use2.jpg"></div>
+            <div class="item"><img src="use1.jpg"></div>
+            <div class="item"><img src="use2.jpg"></div>
+            <div class="item"><img src="use1.jpg"></div>
+            <div class="item"><img src="use2.jpg"></div>
+            <div class="item"><img src="use1.jpg"></div>
+            <div class="item"><img src="use2.jpg"></div>
+            <div class="item"><img src="use1.jpg"></div>
+            <div class="item"><img src="use2.jpg"></div>
+            <div class="item"><img src="use2.jpg"></div>
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="jquery.diamonds.js"></script>
+        <script>
+            $(".demo").diamonds({
+                size : 300, // Size of diamonds in pixels. Both width and height. 
+                gap : 10, // Pixels between each square.
+                hideIncompleteRow : false, // Hide last row if there are not enough items to fill it completely.
+                autoRedraw : true, // Auto redraw diamonds when it detects resizing.
+                itemSelector : ".item" // the css selector to use to select diamonds-items.
+            });
+            </script>
+
+    </body>
+</html>
+<style>
+    .item{
+        background-color: black;
+        height: 300px;
+        width: 300px;
+    }
+    body{
+        background-color: black;
+    }
+    img{
+        opacity: .4;
+        background-color: blue;
+        height: 100%;
+        width: 100%;
+        transition: 1s;
+    }
+    img:hover{
+        opacity: 1;
+        transform: scale(1.25);
+    }
+     .item:hover{
+        box-shadow: 1px 2px 2px white;
+    }
+    .demo{
+        width: 80%;
+        margin: 0 auto;
+    }
+</style>

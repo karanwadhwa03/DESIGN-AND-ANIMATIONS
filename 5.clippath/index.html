@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            CLIP PATH
+        </title>
+    </head>
+    <body>
+        <div class="first">
+            <div class="two"></div>
+            <div class="three"></div>
+            
+        </div>
+    </body>
+</html>
+<style>
+.first{
+    border: 2px solid black;
+    width: 600px;
+    height: 400px;
+    box-shadow: black 2px 2px 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   transition: 1s;
+    
+
+}
+.two{
+    float: left;
+    transition: 3s;
+    background: url("bg1.jpg") ;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    clip-path: polygon(100% 0, 0 0, 0 100%);    z-index: 100;
+}
+.three{
+  
+    background: url("bg2.jpg") ;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition-duration: 3s;
+    
+}
+.two:hover{
+transition: 1s;
+clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.three:hover{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+
+
+}
+
+</style>

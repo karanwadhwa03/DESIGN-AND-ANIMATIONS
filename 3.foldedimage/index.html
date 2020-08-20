@@ -1,0 +1,65 @@
+<html>
+<head></head>
+<body>
+<h1 style="text-align: center;">FOLDED IMAGES</h1>
+<div>
+    <ul>
+      <li><img src="use2.jpg"></li>
+      <li><img src="use1.jpg"></li>
+      <li><img src="use3.jpg"></li>
+      <li><img src="use1.jpg"></li> 
+    </ul>
+  </div>
+    
+</body>
+  </html>
+  <style>
+      img{
+          width: 100%;
+          height: 100%;
+      }
+      body{
+  margin:0;
+  padding:0; 
+}
+li{
+    margin: 10px;
+}
+ul{
+  margin:0;
+  padding:0;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:920px;
+  height:260px;
+  display:flex;  
+    transition:1s;
+ 
+  
+  }
+li{
+  background:url('https://initiate.alphacoders.com/images/605/cropped-660-360-605592.png?9262');
+  background-size:cover;
+  list-style:none;
+  width:25%;
+  height:100%;  
+  transition:1s;
+  
+}
+ul:hover li:nth-child(odd){
+  transform:skewY(15deg);
+  box-shadow:20px 5px 40px 10px ;
+  
+}
+ul:hover{
+    height: 360px;
+}
+ul:hover li:nth-child(even){
+  transform:skewY(-15deg);
+  box-shadow:20px 5px 40px 10px ;  
+
+}
+
+  </style>

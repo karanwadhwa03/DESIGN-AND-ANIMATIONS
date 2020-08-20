@@ -1,0 +1,68 @@
+<html>
+<head></head>
+<body>
+<h1 style="text-align: center;">FOLDED IMAGES</h1>
+<div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li> 
+    </ul>
+  </div>
+ 
+    
+</body>
+  </html>
+  <style>
+    
+      body{
+  margin:0;
+  padding:0; 
+}
+
+ul{
+  margin:0;
+  padding:0;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:640px;
+  height: 430px;
+  display:flex;  
+    transition:1s;
+  }
+li{
+  background:url('bg1.jpg');
+  background-size:cover;
+  list-style:none;
+  width:25%;
+  height:100%;  
+  transition:1s;
+  
+}
+ul:hover li:nth-child(odd){
+  transform:skewY(15deg);
+  box-shadow:20px 5px 40px 10px ;
+  
+}
+
+ul:hover li:nth-child(even){
+  transform:skewY(-15deg);
+  box-shadow:20px 5px 40px 10px ;  
+
+}
+ul li:nth-child(1){
+  background-position:0px;
+}
+ul li:nth-child(2){
+  background-position:-160px;
+}
+ul li:nth-child(3){
+  background-position:-320px;
+}
+ul li:nth-child(4){
+  background-position:-480px;
+}
+  </style>

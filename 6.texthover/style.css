@@ -1,0 +1,55 @@
+
+h1{
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: transparent;
+}
+span{
+    display: block;
+}
+span:nth-child(1){
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+   
+    overflow: hidden;
+    transition: .5s;
+    
+}
+h1:hover span:nth-child(1){
+    transform: translateY(-20px);
+}
+span:nth-child(2){
+    color: black;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+h1:hover span:nth-child(2){
+    transform: translateY(20px);
+}
+span:nth-child(3){
+color: black;
+background-color: yellow;
+font-size: 20px;
+letter-spacing: .45em;
+padding: 5px;
+text-align: center;
+width: 90%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%) scale(0);
+transition: .5s;
+
+}
+h1:hover span:nth-child(3){
+    transform: translate(-50%,-50%) scale(1);
+}
